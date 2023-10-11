@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Promoção</title>
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* CONTAINER DO FORMULÁRIO */
+    .container {
+      background-color: #FFFFF0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+    /* LOGO TIPO */
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 150px;
+      margin-right: 50px;
+    }
+
+
+    /* TEXTO DO CABEÇALHO */
+    h2 {
+      color: black;
+      font-size: 30px;
+    }
+
+    /* CAMPO DE PRENCHIMENTO DO FORMULARIO */
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* BOTÃO DE CADASTRO */
+    .botao-cadastrar {
+      background-color: #FEB320;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="assets/Alogo.png" alt="Logotipo">
+      <h2>Cadastre uma promoção</h2>
+    </div>
+
+    <!-- FORMULARIO DE CADASTRO -->
+    <form>
+      <label for="nome">Produto promocional</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="categoria">Categoria do Produto</label>
+      <select id="categoria" name="categoria" required>
+        <option value="" disabled selected>Selecione uma categoria</option>
+        <option value="bebidas">Bebidas</option>
+        <option value="Carnes">Carnes, Aves e Peixes</option>
+        <option value="Higiene e Beleza">Higiene e Beleza</option>
+        <option value="Hortifruti">Hortifruti</option>
+        <option value="Mercearia e Alimentos">Mercearia e Alimentos</option>
+        <option value="limpeza">Produtos de Limpeza</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <label for="descricao">Descrição da Promoção</label>
+      <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+      <label for="dataInicio">Data de Início</label>
+      <input type="date" id="dataInicio" name="dataInicio" required>
+
+      <label for="dataTermino">Data de Término</label>
+      <input type="date" id="dataTermino" name="dataTermino" required>
+
+      <label for="precoAtual">Preço Atual do Produto</label>
+      <input type="number" step="0.01" id="precoAtual" name="precoAtual" required>
+
+      <label for="precoAnterior">Preço Anterior</label>
+      <input type="number" step="0.01" id="precoAnterior" name="precoAnterior">
+
+      <label for="quantidadeLimite">Limite de Quantidade por Cliente</label>
+      <input type="number" id="quantidadeLimite" name="quantidadeLimite" required>
+
+      <label for="imagem">Imagem ou Foto do Produto</label>
+      <input type="file" id="imagem" name="imagem" accept="image/*" required>
+
+      <!-- BOTÃO PARA CADASTRAR PROMOÇÃO -->
+      <a href="poslogin.html" target="_blank" class="botao-cadastrar">
+        Cadastrar Promoção
+      </a>
+
+    </form>
+  </div>
+</body>
+
+</html>

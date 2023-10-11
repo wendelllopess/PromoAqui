@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --body-color: white;
+            --sidebar-color: #fff;
+            --primary-color: #FFB31F;
+            --primary-color-light: #f6f5ff;
+            --toggle-color: #ddd;
+            --text-color: #000000;
+            /*Transição da barra de nav */
+            --tran-05: all 0.3s ease;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: var(--body-color);
+        }
+
+        /* barra de nav */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            padding: 10px 14px;
+            background: var(--sidebar-color);
+            transition: var(--tran-05);
+            z-index: 100;
+        }
+
+        .sidebar.close {
+            width: 88px;
+        }
+
+        .sidebar li {
+            height: 50px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .sidebar header .image,
+        .sidebar .icon {
+            min-width: 60px;
+            border-radius: 6px;
+        }
+
+        .sidebar .icon {
+            min-width: 60px;
+            border-radius: 6px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        /*Textos da barra de nav*/
+        .sidebar .text,
+        .sidebar .icon {
+            color: var(--text-color);
+            transition: var(--tran-03);
+        }
+
+        /*Textos da barra de nav*/
+        .sidebar .text {
+            font-size: 17px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 1;
+        }
+
+        /*mudar opacidade quando fechado*/
+        .sidebar.close .text {
+            opacity: 0;
+        }
+
+        /*Posição da seta/header*/
+        .sidebar header {
+            position: relative;
+        }
+
+        /*Posição dos itens da barra de nav*/
+        .sidebar header .image-text {
+            display: flex;
+            align-items: center;
+        }
+
+        /*posição logo*/
+        .sidebar header .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header .image-text .NomeMercado {
+            margin-top: 2px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-left: 17px;
+        }
+
+        header .image-text .BemVindo {
+            font-size: 16px;
+            margin-top: -2px;
+            display: block;
+            margin-left: 20px;
+        }
+
+        .sidebar header .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar header .image img {
+            width: 40px;
+            border-radius: 6px;
+        }
+
+        /*Seta*/
+        .sidebar header .toggle {
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            transform: translateY(-50%) rotate(180deg);
+            height: 25px;
+            width: 25px;
+            background-color: var(--primary-color);
+            color: var(--sidebar-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            transition: var(--tran-05);
+        }
+
+        /*posição seta*/
+        .sidebar.close .toggle {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        .sidebar .menu {
+            margin-top: 40px;
+        }
+
+        .sidebar li a {
+            list-style: none;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: var(--tran-03);
+        }
+
+        /*Muda cor ao passar mouse*/
+        .sidebar li a:hover {
+            background-color: #FFB31F;
+        }
+
+        /*Cor das letras ao passar o mouse*/
+        .sidebar li a:hover .icon,
+        .sidebar li a:hover .text {
+            color: var(--sidebar-color);
+        }
+
+        .sidebar .menu-bar {
+            height: calc(100% - 55px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: scroll;
+        }
+
+        /*N aparecer barra de scroll*/
+        .menu-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /*Cor fundo barra de nav*/
+        .sidebar .menu-bar .mode {
+            border-radius: 6px;
+            background-color: var(--primary-color-light);
+            position: relative;
+            transition: var(--tran-05);
+        }
+
+        .menu-bar .bottom-content .toggle-switch {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            min-width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .toggle-switch .switch {
+            position: relative;
+            height: 22px;
+            width: 40px;
+            border-radius: 25px;
+            background-color: var(--toggle-color);
+            transition: var(--tran-05);
+        }
+
+        .switch::before {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            background-color: var(--sidebar-color);
+            transition: var(--tran-04);
+        }
+
+
+
+        .sidebar.close~.home {
+            left: 78px;
+            height: 100vh;
+            width: calc(100% - 78px);
+        }
+
+        /* fim barra nav */
+
+
+        .cards .carder img {
+            width: 150px;
+            margin-bottom: 20px;
+            /* Espaço entre a imagem e o título */
+        }
+
+        .cards .carder h2 {
+            margin-bottom: 10px;
+            /* Espaço entre o título e o preço */
+        }
+
+        .cards .carder p {
+            margin-bottom: 20px;
+            /* Espaço entre o preço e o botão */
+        }
+
+        .informações {
+            background-color: rgb(83, 181, 255);
+            color: #eff6ff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Altera cor de fundo ao passar o mouse */
+        .informações:hover {
+            background-color: rgb(0, 55, 255);
+            transform: scale(1.2);
+            /* Aumenta o tamanho ao passar o mouse */
+        }
+
+        .preço {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: black;
+            background-color: transparent;
+
+
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            padding: 20px;
+
+            box-sizing: border-box;
+
+        }
+
+        .carder {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #eff6ff;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            /* Alinha à direita horizontalmente */
+            justify-content: center;
+            /* Alinha ao centro verticalmente */
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .titulo {
+            color: orange;
+            text-align: right;
+            margin-bottom: 10px;
+            position: relative;
+
+        }
+
+
+        .titulo2 {
+            color: orange;
+            text-align: right;
+            margin-bottom: -2CM;
+            margin-left: -5CM;
+            position: relative;
+
+        }
+
+        .linha {
+            width: 100%;
+            /* A linha ocupa toda a largura do container */
+            height: 3px;
+            /* Altura da linha */
+            background-color: orange;
+            margin-bottom: 100px;
+            /* Espaçamento entre a linha e os cartões */
+        }
+
+        .trash-icon:hover {
+            transform: scale(1.2);
+            /* Aumenta o tamanho do icone de lixeira*/
+            transition: transform 0.3s ease;
+            /* Transição suave */
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span>
+                    <img src="assets/AlogoCesta.PNG" style="width: 50px; height: 60px;">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="NomeMercado">
+                        PROMOAQUI
+                    </span>
+                    <span class="BemVindo">Bem vindo</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Página Inicial</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href="EditarPerfil.html">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Editar Perfil</span>
+                        </a>
+
+                    </li>
+                    <li class="nav-link">
+                        <a href="produtos.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Produtos</span>
+                        </a>
+                    </li>
+                    <div class="bottom-content">
+                        <li class="">
+                            <a href="index.html">
+                                <i class='bx bx-log-out icon'></i>
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="CadastroPromo.html">
+                                <i class='bx bx-plus-circle icon'></i>
+                                <span class="text nav-text">Cadastrar Promoção</span>
+                            </a>
+                        </li>
+                    </div>
+
+                    <li class="nav-link">
+                        <a href="contato.html">
+                            <i class='bx bx-chat icon'></i>
+                            <span class="text nav-text">Contato</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="termosdeuso.html">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Termos de Uso</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <body>
+
+
+        <div class="menu">
+
+            <div class="card-container">
+                <h1 class="titulo">Produtos</h1>
+                <h1 class="titulo2">Cadastrados</h1>
+                <br>
+
+                <div class="linha"></div>
+                <div class="carder">
+                    <img src="assets/ABACAXI.png" alt="Imagem 1" style="width: 100px; height: 100px;">
+                    <h2>Abacaxi</h2>
+                    <p class="preço"> R$ 3,50 und</p>
+                    <button class="informações">Editar informações</button>
+                    <i class='bx bxs-trash trash-icon' style="font-size: 19px;"></i>
+
+
+                </div>
+
+
+                <div class="carder">
+
+                    <img src="assets/Chocolate.png.jpg" alt="Imagem 1" style="width: 100px; height: 100px;">
+                    <h2>Chocolate</h2>
+                    <p class="preço">R$ 5,29 90g</p>
+                    <button class=" informações">Editar informações</button>
+                    <i class='bx bxs-trash trash-icon' style="font-size: 19px;"></i>
+
+
+
+                </div>
+                <div class="carder">
+
+                    <img src="assets/cocazero.png" alt="Imagem 1" style="width: 100px; height: 100px;">
+                    <h2>Coca Zero Lata</h2>
+                    <p class="preço">R$ 3,00 220ml</p>
+                    <button class="informações">Editar informações</button>
+                    <i class='bx bxs-trash trash-icon' style="font-size: 19px;"></i>
+                </div>
+                <div class="carder">
+
+                    <img src="assets/suco-uva.png" alt="Imagem 1" style="width: 100px; height: 100px;">
+                    <h2>Suco de Uva</h2>
+                    <p class="preço">R$ 8,20 500ml</p>
+                    <button class="informações">Editar informações</button>
+                    <i class='bx bxs-trash trash-icon' style="font-size: 19px;"></i>
+
+
+                </div>
+
+
+    </body>
+
+    <script>
+        // JavaScript para alternar a visibilidade do conteúdo das páginas
+
+        const body = document.querySelector("body");
+        const sidebar = body.querySelector("nav");
+        const toggle = body.querySelector(".toggle");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+
+        const navLinks = document.querySelectorAll(".nav-link-item");
+        const contentSections = document.querySelectorAll(".content");
+
+        function hideAllContentSections() {
+            contentSections.forEach((section) => {
+                section.style.display = "none";
+            });
+        }
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const contentId = link.getAttribute("data-content");
+                hideAllContentSections();
+                const contentToShow = document.getElementById(contentId);
+                if (contentToShow) {
+                    contentToShow.style.display = "block";
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+</html>

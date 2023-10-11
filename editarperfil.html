@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --body-color: white;
+            --sidebar-color: #fff;
+            --primary-color: #FFB31F;
+            --primary-color-light: #f6f5ff;
+            --toggle-color: #ddd;
+            --text-color: #000000;
+            /*Transição da barra de nav */
+            --tran-05: all 0.3s ease;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: var(--body-color);
+        }
+
+        /* barra de nav */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            padding: 10px 14px;
+            background: var(--sidebar-color);
+            transition: var(--tran-05);
+            z-index: 100;
+        }
+
+        .sidebar.close {
+            width: 88px;
+        }
+
+        .sidebar li {
+            height: 50px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .sidebar header .image,
+        .sidebar .icon {
+            min-width: 60px;
+            border-radius: 6px;
+        }
+
+        .sidebar .icon {
+            min-width: 60px;
+            border-radius: 6px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        /*Textos da barra de nav*/
+        .sidebar .text,
+        .sidebar .icon {
+            color: var(--text-color);
+            transition: var(--tran-03);
+        }
+
+        /*Textos da barra de nav*/
+        .sidebar .text {
+            font-size: 17px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 1;
+        }
+
+        /*mudar opacidade quando fechado*/
+        .sidebar.close .text {
+            opacity: 0;
+        }
+
+        /*Posição da seta/header*/
+        .sidebar header {
+            position: relative;
+        }
+
+        /*Posição dos itens da barra de nav*/
+        .sidebar header .image-text {
+            display: flex;
+            align-items: center;
+        }
+
+        /*posição logo*/
+        .sidebar header .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header .image-text .NomeMercado {
+            margin-top: 2px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-left: 17px;
+        }
+
+        header .image-text .BemVindo {
+            font-size: 16px;
+            margin-top: -2px;
+            display: block;
+            margin-left: 20px;
+        }
+
+        .sidebar header .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar header .image img {
+            width: 40px;
+            border-radius: 6px;
+        }
+
+        /*Seta*/
+        .sidebar header .toggle {
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            transform: translateY(-50%) rotate(180deg);
+            height: 25px;
+            width: 25px;
+            background-color: var(--primary-color);
+            color: var(--sidebar-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            transition: var(--tran-05);
+        }
+
+        /*posição seta*/
+        .sidebar.close .toggle {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        .sidebar .menu {
+            margin-top: 40px;
+        }
+
+        .sidebar li a {
+            list-style: none;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: var(--tran-03);
+        }
+
+        /*Muda cor ao passar mouse*/
+        .sidebar li a:hover {
+            background-color: #FFB31F;
+        }
+
+        /*Cor das letras ao passar o mouse*/
+        .sidebar li a:hover .icon,
+        .sidebar li a:hover .text {
+            color: var(--sidebar-color);
+        }
+
+        .sidebar .menu-bar {
+            height: calc(100% - 55px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: scroll;
+        }
+
+        /*N aparecer barra de scroll*/
+        .menu-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /*Cor fundo barra de nav*/
+        .sidebar .menu-bar .mode {
+            border-radius: 6px;
+            background-color: var(--primary-color-light);
+            position: relative;
+            transition: var(--tran-05);
+        }
+
+        .menu-bar .bottom-content .toggle-switch {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            min-width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .toggle-switch .switch {
+            position: relative;
+            height: 22px;
+            width: 40px;
+            border-radius: 25px;
+            background-color: var(--toggle-color);
+            transition: var(--tran-05);
+        }
+
+        .switch::before {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            background-color: var(--sidebar-color);
+            transition: var(--tran-04);
+        }
+
+
+
+        .sidebar.close~.home {
+            left: 78px;
+            height: 100vh;
+            width: calc(100% - 78px);
+        }
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            /* Alinhar à esquerda */
+            align-items: flex-start;
+            /* Alinhar ao topo */
+            min-height: 100vh;
+        }
+
+        .container {
+            position: absolute;
+            top: 20px;
+            /* Ajuste essa distância*/
+            left: 50%;
+            transform: translateX(-50%);
+            /* Centraliza o container horizontalmente */
+
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px;
+
+        }
+
+        h2 {
+            color: black;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+        }
+
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 1px;
+            margin-bottom: 24px;
+            text-align: center;
+            background-color: orange;
+            color: white;
+        }
+
+
+        /*mudar entre paginas*/
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .Atualizar {
+            margin-left: 10cm;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        /* Passar mouse  por cima do botão*/
+        .Atualizar:hover {
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span>
+                    <img src="assets/AlogoCesta.png" style="width: 50px; height: 60px;">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="NomeMercado">
+                        PROMOAQUI
+                    </span>
+                    <span class="BemVindo">Bem vindo</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Página Inicial</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href="EditarPerfil.html">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Editar Perfil</span>
+                        </a>
+
+                    </li>
+                    <li class="nav-link">
+                        <a href="produtos.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Produtos</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="contato.html">
+                            <i class='bx bx-chat icon'></i>
+                            <span class="text nav-text">Contato</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="termosdeuso.html">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Termos de Uso</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <form id="form">
+            <div class="form-container">
+                <div class="form-step active" id="step1">
+                    <form action="Controle" method="post">
+
+                        <p><b>DADOS DA EMPRESA</b></p>
+                        <label>Nome Fantasia</label>
+                        <input type="text" name="NomeFantasia" placeholder="TATICO">
+                        <br>
+                        <label>Razão Social:</label>
+                        <input type="text" name="RazaoSocial" placeholder="TATICO SUPERMERCADOS LTDA">
+                        <label for="senha">Defina uma senha</label>
+                        <input type="password" name="senha" placeholder="********">
+                        <label>CNPJ:</label>
+                        <input type="text" name="CNPJ" placeholder="243.344.333/0001-12">
+                        <label>Telefone:</label>
+                        <input type="text" name="Telefone" placeholder="(61) 9112-2321">
+                        <label>Website da Empresa:</label>
+                        <input type="text" name="Website" placeholder="www.taticobaratotododia.com.br">
+                        <button type="button" onclick="nextStep()">Próxima</button>
+                        <button class="Atualizar">Atualizar</button>
+                    </form>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <p><b>ENDEREÇO</b></p>
+                    <label>CEP:</label>
+                    <input type="text" name="CEP" placeholder="72300776">
+                    <label>UF:</label>
+                    <input type="text" name="UF" placeholder="DF">
+                    <label>Cidade:</label>
+                    <input type="text" name="Cidade" placeholder="Brasília">
+                    <label>Bairro:</label>
+                    <input type="text" name="Bairro" placeholder="Gama">
+                    <label>Número:</label>
+                    <input type="text" name="Numero" placeholder="43">
+                    <label>Complemento:</label>
+                    <input type="text" name="Complemento" placeholder="">
+                    <button type="button" onclick="prevStep()">Anterior</button>
+                    <button type="button" onclick="nextStep()">Próxima</button>
+                    <button class="Atualizar">Atualizar</button>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <p><b>RESPONSÁVEL LEGAL</b></p>
+                    <label>Nome Completo:</label>
+                    <input type="text" name="NomeCompleto" placeholder="José Santos">
+                    <label>Função:</label>
+                    <input type="text" name="Funcao" placeholder="Gerente">
+                    <label>E-mail:</label>
+                    <input type="email" name="Email" placeholder="Jose_Santos@dominio.com">
+                    <label>Telefone:</label>
+                    <input type="tel" name="TelefoneResponsavel" placeholder="(61) 9 9972-1236">
+                    <button type="button" onclick="prevStep()">Anterior</button>
+                    <button class="Atualizar">Atualizar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+<script>
+    // JavaScript para alternar a visibilidade do conteúdo das páginas
+
+    const body = document.querySelector("body");
+    const sidebar = body.querySelector("nav");
+    const toggle = body.querySelector(".toggle");
+
+    toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+    });
+
+    const navLinks = document.querySelectorAll(".nav-link-item");
+    const contentSections = document.querySelectorAll(".content");
+
+    function hideAllContentSections() {
+        contentSections.forEach((section) => {
+            section.style.display = "none";
+        });
+    }
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const contentId = link.getAttribute("data-content");
+            hideAllContentSections();
+            const contentToShow = document.getElementById(contentId);
+            if (contentToShow) {
+                contentToShow.style.display = "block";
+            }
+        });
+    });
+
+
+    let currentStep = 1;
+
+    function nextStep() {
+        if (currentStep < 3) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep++;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+        }
+    }
+
+    function prevStep() {
+        if (currentStep > 1) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep--;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+        }
+    }
+
+
+
+</script>
+
+</html>
