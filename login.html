@@ -6,8 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-
-/* CORPO DA PÁGINA */
+        /* CORPO DA PÁGINA */
         body {
             font-family: Arial, sans-serif;
             background-color: #000000;
@@ -21,7 +20,7 @@
             align-items: center;
         }
 
-/* LOGOTIPO */
+        /* LOGOTIPO */
         .logo {
             display: flex;
             align-items: center;
@@ -70,7 +69,7 @@
             border-radius: 4px;
         }
 
-/* Estilo para o botão "Entrar" */
+        /* Estilo para o botão "Entrar" */
         .botao-entrar {
             background-color: #FEB320;
             color: black;
@@ -94,15 +93,16 @@
             <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 
-            <a href="poslogin.html" type="submit" class="btn btn-block" style="background-color: #FEB320;">Entrar</a>
-
+            <a href="poslogin.html" type="submit" class="btn btn-block botao-entrar">Entrar</a>
         </form>
+
+        <!-- Link para a página de recuperação de senha -->
+        <p style="text-align: center;">
+            <a href="RecuperarSenha.html" style="color: #007BFF; text-decoration: none;">Esqueceu sua senha?</a>
+        </p>
     </div>
 
-
-
-    
-<!-- Scripts do Bootstrap -->
+    <!-- Scripts do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
