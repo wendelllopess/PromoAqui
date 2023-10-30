@@ -257,7 +257,23 @@
 
         .content-container {
             text-align: center;
+            width: 60%;
+            /* Ajuste a largura do container de acordo com suas preferências */
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            /* Cor de fundo do container, se desejado */
+            border: 1px solid orange;
+            /* Borda, se desejado */
+            border-radius: 15px;
+            /* Borda arredondada */
+            display: flex;
+            flex-direction: column;
+            /* Organiza os elementos em uma coluna */
+            justify-content: center;
+            align-items: center;
         }
+
 
         h2 {
             text-align: center;
@@ -270,7 +286,7 @@
         <header>
             <div class="image-text">
                 <span>
-                    <img src="assets/AlogoCesta.png" style="width: 50px; height: 60px;">
+                    <img src="assets/AlogoCesta.PNG" style="width: 50px; height: 60px;">
                 </span>
 
                 <div class="text logo-text">
@@ -302,7 +318,12 @@
                             <i class='bx bx-cog icon'></i>
                             <span class="text nav-text">Editar Perfil</span>
                         </a>
-
+                    <li class="nav-link">
+                        <a href="CadastroPromoção.html">
+                            <i class='bx bx-list-plus icon'></i>
+                            <span class="text nav-text">Cadastrar</span>
+                        </a>
+                    </li>
                     </li>
                     <li class="nav-link">
                         <a href="produtos.html">
@@ -340,8 +361,7 @@
     <div class="content-container">
 
         <h1>TERMOS DE USO</h1>
-
-
+        <br>
         <h2>1. Uso da Plataforma</h2>
         <p>1.1. Você concorda em usar a Plataforma apenas para fins legais e de acordo com esses Termos.</p>
         <p>1.2. Você concorda em não usar a Plataforma de maneira que possa prejudicar, desativar, sobrecarregar
