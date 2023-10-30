@@ -1,5 +1,5 @@
 /* FONTE IMPORTADA DO GOOGLE */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap");
 
 * {
   font-family: roboto;
@@ -8,13 +8,12 @@
   padding: 0;
 }
 
-
 /* CORES DO BODY */
 body {
-  --amarelo: #FEB320;
+  --amarelo: #feb320;
   --azul-claro: #eff6ff;
-  --azul-escuro: #5271FF;
-  font-family: 'Barlon', sans-serif;
+  --azul-escuro: #5271ff;
+  font-family: "Barlon", sans-serif;
 }
 
 .container-flex {
@@ -60,7 +59,6 @@ body {
 .header .nav-header {
   display: flex;
   align-items: center;
-
 }
 
 .header .logo {
@@ -84,17 +82,16 @@ body {
   color: #eff6ff;
 }
 
-
 /* BOTÃO DE LOGIN E CADASTRAR */
 .button-login,
 .button-cadastrar {
-  padding: 15px 30px;
-  background-color: #FEB320;
+  padding: 10px 20px;
+  background-color: #feb320;
   text-decoration: none;
   color: #000;
   border-radius: 10px;
   font-weight: 700;
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .button-login:hover,
@@ -107,12 +104,12 @@ body {
   color: #eff6ff;
 }
 
-input [type=checkbox] {
+input [type="checkbox"] {
   border: 2px solid var(--azul-escuro);
   box-shadow: none;
 }
 
-input[type=checkbox]:checked,
+input[type="checkbox"]:checked,
 input[type="checkbox"]:focus {
   background-color: var(--azul-escuro);
   border-color: var(--azul-escuro);
@@ -120,8 +117,6 @@ input[type="checkbox"]:focus {
   outline: none;
   height: 15px;
 }
-
-
 
 /* BANNER */
 .banner-1 {
@@ -138,19 +133,16 @@ input[type="checkbox"]:focus {
 }
 
 .banners-titulo {
-  --bs-bg-opacity: .7;
+  --bs-bg-opacity: 0.7;
 }
 
 .banner-2 {
   background-image: url(./assets/bannercarrinho.jpg);
-
 }
 
 .banner-3 {
   background-image: url(./assets/bannerpreços.jpg);
-
 }
-
 
 .banner-4 .logo-banner {
   display: flex;
@@ -159,11 +151,8 @@ input[type="checkbox"]:focus {
 }
 
 .banners-titulo {
-  --bs-bg-opacity: .7;
+  --bs-bg-opacity: 0.7;
 }
-
-
-
 
 /* CARD */
 .py-5 .text {
@@ -198,20 +187,16 @@ input[type="checkbox"]:focus {
 .cards .carder:nth-child(4) img {
   width: 200;
 
-
-
-
   /* BOTÃO DO CARD */
 }
 
 .botao-padrao {
-  background-color: #FEB320;
+  background-color: #feb320;
 }
 
 .botao-padrao:hover {
-  background-color: #5271FF;
+  background-color: #5271ff;
 }
-
 
 /* BOTÃO MAIS INFORMAÇÕES */
 .button-card {
@@ -220,24 +205,21 @@ input[type="checkbox"]:focus {
   text-decoration: none;
   color: #000;
   border-radius: 10px;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 .button-card:hover {
   transform: scale(1.1);
 }
 
-
-
-
 /*BOTÃO CATEGORIA CARDS*/
 .button-card2 {
   padding: 15px 30px;
-  background-color: #FEB320;
+  background-color: #feb320;
   text-decoration: none;
   color: #000;
   border-radius: 10px;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 .button-card:hover {
@@ -246,7 +228,7 @@ input[type="checkbox"]:focus {
 
 /* DIVISORIAS */
 .divider {
-  border-top: 5px solid #FEB320;
+  border-top: 5px solid #feb320;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -258,7 +240,6 @@ input[type="checkbox"]:focus {
   width: auto;
   height: auto;
 }
-
 
 .section-2 {
   background-image: url(assets/banner-2.png);
@@ -288,7 +269,6 @@ input[type="checkbox"]:focus {
   background-position: justify;
 }
 
-
 .custom-header {
   height: 165px;
 }
@@ -297,7 +277,6 @@ input[type="checkbox"]:focus {
   font-size: 100px;
   color: #eff6ff;
 }
-
 
 /* RODAPÉ  */
 .footer {

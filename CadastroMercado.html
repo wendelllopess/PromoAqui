@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro da Empresa</title>
     <style>
-        /* ESTILO DA PÁGINA */
+
+
+/*ESTILO DA PÁGINA */
         body {
-            font-family: "Poppins", sans-serif;
-            background-color: black;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,9 +20,10 @@
             min-height: 100vh;
         }
 
-        /* CONTAINER PRINCIPAL */
+/* CONTAINER PRINCIPAL */
         .container {
             background-color: #FFFFF0;
+            ;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -28,26 +31,27 @@
             max-width: 600px;
         }
 
-        /* LOGOTIPO */
+/* LOGOTIPO */
         .logo {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
 
-        /* IMAGEM DO LOGOTIPO */
+/* IMAGEM DO LOGOTIPO      */
         .logo img {
             width: 250px;
             margin-right: 50px;
         }
 
-        /* CABEÇALHO H2 */
+/* CABEÇALHO H2 */
         h2 {
             color: black;
             font-size: 24px;
             margin: 0;
             text-align: center;
         }
+
 
         label {
             display: block;
@@ -56,7 +60,7 @@
             color: black;
         }
 
-        /* CAMPO DE ENTRADA DE DADOS DO FORMULÁRIO */
+/* CAMPO DE ENTRADA DE DADOS DO FORMULARIO */
         input,
         textarea,
         select {
@@ -67,9 +71,9 @@
             border-radius: 4px;
         }
 
-        /* BOTÃO DE CADASTRO */
+/* BOTÃO DE CADASTRO  */
         .botao-cadastrarMercado {
-            background-color: #FFB31F;
+            background-color: #FEB320;
             color: black;
             padding: 10px 20px;
             border: none;
@@ -78,27 +82,18 @@
             text-decoration-line: none;
         }
 
-        /* MUDANÇA DE COR NO BOTÃO DE CADASTRO */
+/* MUDANÇA DE COR NO BOTÃO DE CADASTRO */
         .botao-cadastrarMercado:hover {
-            background-color: #FFA000;
+            background-color: #b2dafa;
         }
 
-        /* PARÁGRAFO */
+/* PARAGRAFO */
         p {
             margin-top: 24px;
             margin-bottom: 24px;
             text-align: center;
             background-color: black;
-            color: #FFB31F;
-        }
-
-        /* MUDANÇA ENTRE AS PÁGINAS */
-        .form-step {
-            display: none;
-        }
-
-        .form-step.active {
-            display: block;
+            color: #FEB320;
         }
     </style>
 </head>
@@ -110,97 +105,67 @@
             <h2>Cadastre-se agora</h2>
         </div>
         <form>
-            <div class="form-step active">
-                <p><b>DADOS DA EMPRESA</b></p>
+            <p><b>DADOS DA EMPRESA</b></p>
 
-                <!-- DADOS DA EMPRESA -->
-                <label>Nome Fantasia:</label>
-                <input type="text" name="NomeFantasia" placeholder="Informe o nome fantasia">
+<!-- DADOS DA EMPRESA -->
+            <label>Nome Fantasia:</label>
+            <input type="text" placeholder="Informe o nome fantasia">
 
-                <label>Razão Social:</label>
-                <input type="text" name="RazaoSocial" placeholder="Informe a razão social">
+            <label>Razão Social:</label>
+            <input type="text" placeholder="Informe a razão social">
 
-                <label>CNPJ:</label>
-                <input type="text" name="CNPJ" placeholder="XX.XXX.XXX/0001-XX">
+            <label>CNPJ:</label>
+            <input type="text" placeholder="XX.XXX.XXX/0001-XX">
 
-                <label>Telefone:</label>
-                <input type="text" name="Telefone" placeholder="(XX) X XXXX-XXXX">
+            <label>Telefone:</label>
+            <input type="text" placeholder="(XX) X XXXX-XXXX">
 
-                <label>Website da Empresa:</label>
-                <input type="text" name="Website" placeholder="Informe o website">
+            <label>Website da Empresa:</label>
+            <input type="text" placeholder="Informe o website">
 
-                <button type="button" class="botao-cadastrarMercado" onclick="nextStep()">Próximo</button>
-            </div>
+ <!-- ENDEREÇO -->
 
-            <div class="form-step">
-                <p><b>ENDEREÇO</b></p>
-                <!-- ENDEREÇO -->
-                <label>CEP:</label>
-                <input type="text" name="CEP" placeholder="Informe o CEP">
+            <p><b>ENDEREÇO</b></p>
+            <label>CEP:</label>
+            <input type="text" placeholder="Informe o CEP">
 
-                <label>UF:</label>
-                <input type="text" name="UF" placeholder="Informe o UF">
+            <label>UF:</label>
+            <input type="text" placeholder="Informe o UF">
 
-                <label>Cidade:</label>
-                <input type="text" name="Cidade" placeholder="Informe a cidade">
+            <label>Cidade:</label>
+            <input type="text" placeholder="Informe a cidade">
 
-                <label>Bairro:</label>
-                <input type="text" name="Bairro" placeholder="Informe o bairro">
+            <label>Bairro:</label>
+            <input type="text" placeholder="Informe o bairro">
 
-                <label>Número:</label>
-                <input type="text" name="Numero" placeholder="Exemplo 123">
+            <label>Número:</label>
+            <input type="text" placeholder="Exemplo 123">
 
-                <label>Complemento:</label>
-                <input type="text" name="Complemento" placeholder="Informe o complemento">
+            <label>Complemento:</label>
+            <input type="text" placeholder="Informe o complemento">
 
-                <button type="button" class="botao-cadastrarMercado" onclick="prevStep()">Anterior</button>
-                <button type="button" class="botao-cadastrarMercado" onclick="nextStep()">Próximo</button>
-            </div>
+<!-- RESPONSÁVEL LEGAL -->
+            <p><b>RESPONSÁVEL LEGAL</b></p>
+            <label>Nome Completo:</label>
+            <input type="text" placeholder="Informe o nome completo">
 
-            <div class="form-step">
-                <p><b>RESPONSÁVEL LEGAL</b></p>
-                <!-- RESPONSÁVEL LEGAL -->
-                <label>Nome Completo:</label>
-                <input type="text" name="NomeCompleto" placeholder="Informe o nome completo">
+            <label>Função:</label>
+            <input type="text" placeholder="Informe a função">
 
-                <label>Função:</label>
-                <input type="text" name="Funcao" placeholder="Informe a função">
+            <label>E-mail:</label>
+            <input type="email" placeholder="Informe o e-mail">
 
-                <label>E-mail:</label>
-                <input type="email" name="Email" placeholder="Informe o e-mail">
+            <label>Telefone:</label>
+            <input type="tel" placeholder="(XX) X XXXX-XXXX">
+            
+            
+<!-- BOTÃO DE CADASTRO COM LINK PARA TELA DE LOGIN -->
+            <a href="login.html" target="_blank" class="botao-cadastrarMercado">
+                Cadastrar
+            </a>
 
-                <label>Telefone:</label>
-                <input type="tel" name="TelefoneResponsavel" placeholder="(XX) X XXXX-XXXX">
-
-                <button type="button" class="botao-cadastrarMercado" onclick="prevStep()">Anterior</button>
-                <a href="login.html" class="botao-cadastrarMercado">Cadastrar</a>
-
-            </div>
         </form>
     </div>
-
-    <script>
-        let currentStep = 1;
-
-        function nextStep() {
-            const formSteps = document.querySelectorAll('.form-step');
-            if (currentStep < formSteps.length) {
-                formSteps[currentStep - 1].classList.remove('active');
-                currentStep++;
-                formSteps[currentStep - 1].classList.add('active');
-            }
-        }
-
-        function prevStep() {
-            const formSteps = document.querySelectorAll('.form-step');
-            if (currentStep > 1) {
-                formSteps[currentStep - 1].classList.remove('active');
-                currentStep--;
-                formSteps[currentStep - 1].classList.add('active');
-            }
-        }
-
-    </script>
 </body>
 
 </html>
