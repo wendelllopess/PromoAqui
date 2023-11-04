@@ -86,15 +86,15 @@
     </div>
 
     <div class="container">
-        <form>
+        <form action=""  method="post" id ="formulario">
             <label for="cnpj">CNPJ</label>
             <input type="text" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ" required>
 
             <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
-
-            <a href="poslogin.html" type="submit" class="btn btn-block botao-entrar">Entrar</a>
-        </form>
+           
+            <button type="submit" class="btn btn-block botao-entrar" id="botao_entrar">ENTRAR</button>       
+    </form>
 
         <!-- Link para a página de recuperação de senha -->
         <p style="text-align: center;">
@@ -112,6 +112,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="./login.js"></script>
+
 </body>
 
 </html>
