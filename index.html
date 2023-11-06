@@ -39,15 +39,6 @@
           <li><a href="Sobre.html" class="menu-item">Sobre</a></li>
 
 
-          <!-- BOTÃO DO MODO NOTURNO 
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Modo noturno</label>
-          </div>
-        </ul>
-      -->
-
-
           <!-- BOTÃO CADASTRO E LOGIN -->
           <a href="login.html" target="_blank" class="button-login">
             Login
@@ -85,87 +76,96 @@
         </div>
 
         <!-- CARD - FRUTAS      -->
-        <div class="cards">
-          <div class="carder">
-            <img src="assets/Frutas/ABACATE.png" alt="Imagem 1">
-            <h2>Abacate</h2>
-            <p>R$ 3,50 kg</p> 
-            <!--Lembrar de copiar e colar esse codigo em todos os intens -->
-            <a href="#" class="btn botao-padrao w-100 fw-bold" data-bs-toggle="offcanvas" data-bs-target="#canvas-1" aria-controls="offcanvasRight">Quero detalhes</a>
-          </div>
 
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-1" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasRightLabel">PromoAqui</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Abacaxi Perola - R$2,49 und
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      O abacaxi perola se comer faz xixi...
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Validade da promoção
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Início em 22/11/2023 / Término em 29/11/2023
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Onde encontro essa promoção?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Supermercado Eldorado. QI 07, Setor de Indústrias - Gama/DF.
-                    </div>
-                  </div>
-                </div>
+        <div class="cards">
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Frutas/ABACATE.png" alt="Imagem 1">
+                <h2>Abacate</h2>
+                <p>R$ 2,50 kg</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+
+                <p class="btn botao-padrao w-100 fw-bold" ">Produto promocional:</p>
+                <img src=" assets/Frutas/ABACATE.png" alt="Imagem 1">
+
+                <p>Abacate - R$ 2,50 kg</p>
+                <p class=" btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href=https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu target="_blank">Localização</a>.</p>
               </div>
             </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/Frutas/ABACAXI.png" alt="Imagem 4">
-            <h2>Abacaxi Pérola</h2>
-            <p>R$ 2,49 und</p>
-            <a href="#" class="btn botao-padrao w-100 fw-bold" data-bs-toggle="offcanvas" data-bs-target="#canvas-1" aria-controls="offcanvasRight">Quero detalhes</a>
 
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Frutas/ABACAXI.png" alt="Imagem 4">
+                <h2>Abacaxi Pérola</h2>
+                <p>R$ 2,49 und</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold" ">Produto promocional:</p>
+                <img src=" assets/Frutas/ABACAXI.png" alt="Imagem 1">
+                <p>Abacaxi Pérola - R$ 2,49 und</p>
+                <p class=" btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href=https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu target="_blank">Localização</a>.</p>
+              </div>
+            </div>
           </div>
 
 
-          <div class="carder">
-            <img src="assets/Frutas/LARANJA.png" alt="Imagem 4">
-            <h2>Laranja Pêra</h2>
-            <p>R$ 2,49 kg</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+
+                <img src="assets/Frutas/LARANJA.png" alt="Imagem 4">
+
+                <h2>Laranja Pêra</h2>
+                <p>R$ 1,89 kg</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold" ">Produto promocional:</p>
+                <img src=" assets/Frutas/LARANJA.png" alt="Imagem 1">
+                <p>Laranja Pêra - R$ 1,89 und</p>
+                <p class=" btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a>.</p>
+              </div>
+            </div>
           </div>
 
 
-          <div class="carder">
-            <img src="assets/Frutas/BANANA.png" alt="Imagem 4">
-            <h2>Banana Nanica</h2>
-            <p>R$ 2,49 kg</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Frutas/BANANA.png" alt="Imagem 4">
+                <h2>Banana Nanica</h2>
+                <p>R$ 2,49 kg</p> <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold" ">Produto promocional:</p>
+                <img src=" assets/Frutas/BANANA.png" alt="Imagem 1">
+                <p>Banana Nanica - R$2,49 und</p>
+                <p class=" btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a>.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
+
     </section>
 
 
@@ -180,43 +180,96 @@
           <div class="divider"></div>
         </div>
 
-
-        <!-- CARD - VERDURAS E LEGUMES      -->
         <div class="cards">
-          <div class="carder">
-            <img src="assets/VerduraseLegumes/BERINJELA.png" alt="Imagem 1">
-            <h2>Berinjela</h2>
-            <p>R$ 3,50 Kg</p>
-            <a class="button-card">Mais informações</a>
+          <!-- Cartão 1: Berinjela -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/VerduraseLegumes/BERINJELA.png" alt="Imagem 1">
+                <h2>Berinjela</h2>
+                <p>R$ 2,50 Kg</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/VerduraseLegumes/BERINJELA.png" alt="Imagem 1">
+                <p>Berinjela - R$ 2,50 kg</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/VerduraseLegumes/ALFACE.png" alt="Imagem 4">
-            <h2>Alface Crespa</h2>
-            <p>R$ 2,49 und</p>
-            <a class="button-card">Mais informações</a>
+          <!-- Cartão 2: Alface Crespa -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/VerduraseLegumes/ALFACE.png" alt="Imagem 4">
+                <h2>Alface Crespa</h2>
+                <p>R$ 1,49 und</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/VerduraseLegumes/ALFACE.png" alt="Imagem 4">
+                <p>Alface Crespa - R$ 1,49 und</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
 
-          <div class="carder">
-            <img src="assets/VerduraseLegumes/BATATA.png" alt="Imagem 4">
-            <h2>Batata Inglesa</h2>
-            <p>R$ 2,49 kg</p>
-            <a class="button-card">Mais informações</a>
+
+
+          <!-- Cartão 3: Batata Inglesa -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/VerduraseLegumes/BATATA.png" alt="Imagem 4">
+                <h2>Batata Inglesa</h2>
+                <p>R$ 1,79 kg</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/VerduraseLegumes/BATATA.png" alt="Imagem 4">
+                <p>Batata Inglesa - R$ 1,79 kg</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-
-          <div class="carder">
-            <img src="assets/VerduraseLegumes/TOMATE.png" alt="Imagem 4">
-            <h2>Tomate Italiano</h2>
-            <p>R$ 2,49 kg</p>
-            <a class="button-card">Mais informações</a>
+          <!-- Cartão 4: Tomate Italiano -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/VerduraseLegumes/TOMATE.png" alt="Imagem 4">
+                <h2>Tomate Italiano</h2>
+                <p>R$ 1,99 kg</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/VerduraseLegumes/TOMATE.png" alt="Imagem 4">
+                <p>Tomate Italiano - R$ 1,99 kg</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
     </section>
-
-
 
     <!-- BOTÃO SEÇÃO DE AÇOUGUE   -->
     <section class="py-5">
@@ -226,39 +279,93 @@
             <a href="Pag.açougue.html" type="submit" class="button-card2">Açougue</a>
           </p>
           <div class="divider"></div>
-        </div CARD - AÇOUGUE -->
-        <div class="cards">
-          <div class="carder">
-            <img src="assets/açougue/CARNEMOIDA.png" alt="Imagem 4">
-            <h2>Carne Moída</h2>
-            <p>R$ 19,90 </p>
-            <a class="button-card">Mais informações</a>
+
+
+          <div class="cards">
+            <!-- Card 1: Carne Moída -->
+            <div class="carder flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/açougue/CARNEMOIDA.png" alt="Imagem 4">
+                  <h2>Carne Moída</h2>
+                  <p>R$ 19,90</p>
+                  <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+                </div>
+                <div class="flip-card-back">
+                  <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                  <img src="assets/açougue/CARNEMOIDA.png" alt="Imagem 4">
+                  <p>Carne Moída - R$ 19,90</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                  <p>De 22/11/2023 a 29/11/2023</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                  <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Bisteca Suína -->
+            <div class="carder flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/açougue/BISTECA.png" alt="Imagem 4">
+                  <h2>Bisteca Suína</h2>
+                  <p>R$ 7,99 kg</p>
+                  <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+                </div>
+                <div class="flip-card-back">
+                  <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                  <img src="assets/açougue/BISTECA.png" alt="Imagem 4">
+                  <p>Bisteca Suína - R$ 7,99 kg</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                  <p>De 22/11/2023 a 29/11/2023</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                  <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Peito de Frango -->
+            <div class="carder flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/açougue/PEITOFRANGO.png" alt="Imagem 4">
+                  <h2>Peito de Frango</h2>
+                  <p>R$ 12,49 kg</p>
+                  <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+                </div>
+                <div class="flip-card-back">
+                  <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p> <img src="assets/açougue/PEITOFRANGO.png" alt="Imagem 4">
+                  <p>Peito de Frango - R$ 12,49 kg</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                  <p>De 22/11/2023 a 29/11/2023</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                  <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Picanha Bovina -->
+            <div class="carder flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/açougue/PICANHA.png" alt="Imagem 4">
+                  <h2>Picanha Bovina</h2>
+                  <p>R$ 51,40 kg</p>
+                  <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+                </div>
+                <div class="flip-card-back">
+                  <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                  <img src="assets/açougue/PICANHA.png" alt="Imagem 4">
+                  <p>Picanha Bovina - R$ 51,40 kg</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                  <p>De 22/11/2023 a 29/11/2023</p>
+                  <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                  <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/açougue/BISTECA.png" alt="Imagem 4">
-            <h2>Bisteca Suína</h2>
-            <p>R$ 7,99 kg</p>
-            <a class="button-card">Mais informações</a>
-          </div>
-
-
-          <div class="carder">
-            <img src="assets/açougue/PEITOFRANGO.png" alt="Imagem 4">
-            <h2>Peito de Frango</h2>
-            <p>R$ 12,49 kg</p>
-            <a class="button-card">Mais informações</a>
-          </div>
-
-
-          <div class="carder">
-            <img src="assets/açougue/PICANHA.png" alt="Imagem 4">
-            <h2>Picanha Bovina</h2>
-            <p>R$ 51,40 kg</p>
-            <a class="button-card">Mais informações</a>
-          </div>
-        </div>
-      </div>
     </section>
 
 
@@ -275,35 +382,91 @@
 
         <!-- CARD - PRODUTOS DE LIMPEZA      -->
         <div class="cards">
-          <div class="carder">
-            <img src="assets/ProdutosDeLimpeza/DETERGENTE.png" alt="Imagem 1">
-            <h2>Detergente Ipê</h2>
-            <p>R$ 1,00 und </p>
-            <a class="button-card">Mais informações</a>
+          <!-- Card 1: Detergente Ipê -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/ProdutosDeLimpeza/DETERGENTE.png" alt="Imagem 1">
+                <h2>Detergente Ipê</h2>
+                <p>R$ 1,00 und</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/ProdutosDeLimpeza/DETERGENTE.png" alt="Imagem 4">
+                <p>Detergente Ipê - R$ 1,00 und</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/ProdutosDeLimpeza/bombril400.png" alt="Imagem 4">
-            <h2>Esponja de aço</h2>
-            <p>R$ 3,00 und</p>
-            <a class="button-card">Mais informações</a>
+          <!-- Card Esponja de Aço -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/ProdutosDeLimpeza/bombril400.png" alt="Imagem 4">
+                <h2>Esponja de Aço</h2>
+                <p>R$ 3,00 und</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/ProdutosDeLimpeza/bombril400.png" alt="Imagem 4">
+                <p>Esponja de Aço - R$ 3,00 und</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/ProdutosDeLimpeza/AGUA-SANITARIA.png" alt="Imagem 4">
-            <h2>Água Sanitária</h2>
-            <p>R$ 5,00 5l</p>
-            <a class="button-card">Mais informações</a>
+          <!-- Card 3: Água Sanitária -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/ProdutosDeLimpeza/AGUA-SANITARIA.png" alt="Imagem 4">
+                <h2>Água Sanitária</h2>
+                <p>R$ 5,00 5l</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/ProdutosDeLimpeza/AGUA-SANITARIA.png" alt="Imagem 4">
+                <p>Água Sanitária - R$ 5,00 5l</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/ProdutosDeLimpeza/omo400.png" alt="Imagem 4">
-            <h2>Sabão Omo</h2>
-            <p>R$ 7,00 2kg</p>
-            <a class="button-card">Mais informações</a>
+          <!-- Card 4: Sabão Omo -->
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/ProdutosDeLimpeza/omo400.png" alt="Imagem 4">
+                <h2>Sabão Omo</h2>
+                <p>R$ 7,00 2kg</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/ProdutosDeLimpeza/omo400.png" alt="Imagem 4">
+                <p>Sabão Omo - R$ 7,00 2kg</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
     </section>
 
 
@@ -316,38 +479,88 @@
           </p>
           <div class="divider"></div>
         </div>
-
-        <!-- CARD - PRODUTOS DE HIGIENE      -->
+        <!-- CARD - PRODUTOS DE HIGIENE -->
         <div class="cards">
-          <div class="carder">
-            <img src="assets/Higiene pessoal/fio-dental-regular-menta-50m-colgate-un.png" alt="Imagem 1">
-            <h2>Fio Dental</h2>
-            <p>R$ 4,99 und </p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Higiene pessoal/fio-dental-regular-menta-50m-colgate-un.png" alt="Imagem 1">
+                <h2>Fio Dental</h2>
+                <p>R$ 4,99 und</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/Higiene pessoal/fio-dental-regular-menta-50m-colgate-un.png" alt="Imagem 1">
+                <p>Fio Dental - R$ 4,99 und</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/Higiene pessoal/shampoo400.png" alt="Imagem 4">
-            <h2>Shampoo Elseve</h2>
-            <p>R$ 19,99 400ml</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Higiene pessoal/shampoo400.png" alt="Imagem 4">
+                <h2>Shampoo Elseve</h2>
+                <p>R$ 19,99 400ml</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/Higiene pessoal/shampoo400.png" alt="Imagem 4">
+                <p>Shampoo Elseve - R$ 19,99 400ml</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/Higiene pessoal/SABONETE.png" alt="Imagem 4">
-            <h2>Sabonete Dove</h2>
-            <p>R$ 3,95 90g</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Higiene pessoal/SABONETE.png" alt="Imagem 4">
+                <h2>Sabonete Dove</h2>
+                <p>R$ 3,95 90g</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/Higiene pessoal/SABONETE.png" alt="Imagem 4">
+                <p>Sabonete Dove - R$ 3,95 90g</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/Higiene pessoal/c-dental400.png" alt="Imagem 4">
-            <h2>Creme Dental </h2>
-            <p>R$ 4,00 und</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/Higiene pessoal/c-dental400.png" alt="Imagem 4">
+                <h2>Creme Dental</h2>
+                <p>R$ 4,00 und</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/Higiene pessoal/c-dental400.png" alt="Imagem 4">
+                <p>Creme Dental - R$ 4,00 und</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- BOTÃO SEÇÃO DE BEBIDAS   -->
@@ -359,43 +572,86 @@
           </p>
           <div class="divider"></div>
         </div>
-
-        <!-- CARD - BEBIDAS      -->
         <div class="cards">
-          <div class="carder">
-            <img src="assets/bebidas/TODDYNHO.png" alt="Imagem 1">
-            <h2>Toddynho</h2>
-            <p>R$ 4,49 - 200 ml </p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/bebidas/TODDYNHO.png" alt="Imagem 1">
+                <h2>Toddynho</h2>
+                <p>R$ 4,49 - 200 ml</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/bebidas/TODDYNHO.png" alt="Imagem 1">
+                <p>Toddynho - R$ 4,49 - 200 ml</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-
-          <div class="carder">
-            <img src="assets/bebidas/CERVEJA.png" alt="Imagem 2">
-            <h2>Cerveja Budweise </h2>
-            <p>R$ 3,85 - 350ml</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/bebidas/CERVEJA.png" alt="Imagem 2">
+                <h2>Cerveja Budweise</h2>
+                <p>R$ 3,85 - 350ml</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/bebidas/CERVEJA.png" alt="Imagem 2">
+                <p>Cerveja Budweise - R$ 3,85 - 350ml</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-
-          <div class="carder">
-            <img src="assets/bebidas/suco-uva.png" alt="Imagem 3">
-            <h2>Suco de Uva</h2>
-            <p>R$ 8,20 - 500ml</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/bebidas/suco-uva.png" alt="Imagem 3">
+                <h2>Suco de Uva</h2>
+                <p>R$ 8,20 - 500ml</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <p>Suco de Uva - R$ 8,20 - 500ml</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-
-          <div class="carder">
-            <img src="assets/bebidas/cocazero.png" alt="Imagem 4">
-            <h2>Coca Cola Zero</h2>
-            <p>R$ 3,00 - 220 ml</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/bebidas/cocazero.png" alt="Imagem 4">
+                <h2>Coca Cola Zero</h2>
+                <p>R$ 3,00 - 220 ml</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/bebidas/cocazero.png" alt="Imagem 4">
+                <p>Coca Cola Zero - R$ 3,00 - 220 ml</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
     </section>
-
 
     <!-- BOTÃO SEÇÃO DIVERSOS  -->
     <section class="py-5">
@@ -409,36 +665,87 @@
 
         <!-- CARD - DIVERSOS      -->
         <div class="cards">
-          <div class="carder">
-            <img src="assets/diversos/FLOCÃO.png" alt="Imagem 1">
-            <h2>Flocão</h2>
-            <p>R$ 1,50 - 500g </p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/diversos/FLOCÃO.png" alt="Imagem 1">
+                <h2>Flocão</h2>
+                <p>R$ 1,50 - 500g</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/diversos/FLOCÃO.png" alt="Imagem 1">
+                <p>Flocão - R$ 1,50 - 500g</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/diversos/iogurte.png" alt="Imagem 4">
-            <h2>Iogurte Grego</h2>
-            <p>R$ 3,85 - und</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/diversos/iogurte.png" alt="Imagem 4">
+                <h2>Iogurte Grego</h2>
+                <p>R$ 3,85 - und</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/diversos/iogurte.png" alt="Imagem 4">
+                <p>Iogurte Grego - R$ 3,85 - und</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
 
-          <div class="carder">
-            <img src="assets/diversos/ARROZ.png" alt="Imagem 4">
-            <h2>Arroz Camil</h2>
-            <p>R$ 5,65 - 1kg</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/diversos/ARROZ.png" alt="Imagem 4">
+                <h2>Arroz Camil</h2>
+                <p>R$ 5,65 - 1kg</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/diversos/ARROZ.png" alt="Imagem 4">
+                <p>Arroz Camil - R$ 5,65 - 1kg</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+
+              </div>
+            </div>
           </div>
 
-
-          <div class="carder">
-            <img src="assets/diversos/TALENTO.png" alt="Imagem 4">
-            <h2>Chocolate</h2>
-            <p>R$ 5,29 - 90g</p>
-            <a class="button-card">Mais informações</a>
+          <div class="carder flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/diversos/TALENTO.png" alt="Imagem 4">
+                <h2>Chocolate</h2>
+                <p>R$ 5,29 - 90g</p>
+                <a href="#" class="btn botao-padrao w-100 fw-bold">Mais informações</a>
+              </div>
+              <div class="flip-card-back">
+                <p class="btn botao-padrao w-100 fw-bold">Produto promocional:</p>
+                <img src="assets/diversos/TALENTO.png" alt="Imagem 4">
+                <p>Chocolate - R$ 5,29 - 90g</p>
+                <p class="btn botao-padrao w-100 fw-bold">Validade da promoção:</p>
+                <p>De 22/11/2023 a 29/11/2023</p>
+                <p class="btn botao-padrao w-100 fw-bold">Onde encontro essa promoção:</p>
+                <p>Supermercado Eldorado. <a href="https://www.google.com/maps/dir//SUPERMERCADO+ELDORADO/@-16.0107356,-48.2186175,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x93598076f66a4c3f:0x9ab14c74f316e2f6!2m2!1d-48.0541491!2d-16.0111282?entry=ttu" target="_blank">Localização</a></p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+
     </section>
 
 
