@@ -175,13 +175,21 @@ input[type="checkbox"]:focus {
 .cards .carder {
   text-align: center;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 50px 30px;
+  padding: 10px 10px;
   border-radius: 10px;
   background-color: #eff6ff;
+  width: 250px; /* Defina um tamanho fixo */
+  height: 400px; /* Defina uma altura fixa, se necessário */
 }
 
 .cards .carder img {
-  width: 300px;
+  width: 100%; /* A imagem ocupará toda a largura do card */
+  height: auto; /* A altura se ajustará automaticamente para manter a proporção da imagem */
+}
+
+.cards .carder h2,
+.cards .carder p {
+  text-align: center; /* Centralizar o texto horizontalmente */
 }
 
 .cards .carder:nth-child(4) img {
@@ -321,4 +329,54 @@ input[type="checkbox"]:focus {
   max-width: 600px;
   text-align: center;
   font-size: 22px;
+}
+
+/* CARD FLIP-CARD */
+.flip-card {
+  perspective: 1000px;
+  width: 300px;
+  max-width: 300px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front {
+  background-color: #eff6ff;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  background-color: white;
+  color: #000;
+  transform: rotateY(180deg);
+  padding: 0px; 
+  margin: 0; 
+}
+.flip-card-back img {
+  max-width: 25%;
+  max-height: 25%;
 }
