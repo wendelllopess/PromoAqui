@@ -92,7 +92,7 @@
       color: #FFB31F;
     }
 
-<<<<<<< HEAD
+
 /* BOTÃO DE CADASTRO  */
         .botao-cadastrarMercado {
             background-color: #FEB320;
@@ -105,12 +105,7 @@
             font-size: 15px;
             font-weight: bolder;
         }
-=======
-    /* MUDANÇA ENTRE AS PÁGINAS */
-    .form-step {
-      display: none;
-    }
->>>>>>> 1c9442f43914195e4d8e15918f1e26cae0a15de0
+
 
     .form-step.active {
       display: block;
@@ -119,7 +114,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
+
 
     <div class="container">
         <div class="logo">
@@ -197,105 +192,7 @@
     </div>
 
     <script src="./CadastroMercado.js"></script>
-=======
-  <div class="container">
-    <div class="logo">
-      <img src="assets/Alogo.png" alt="Logotipo">
-      <h2>Cadastre-se agora</h2>
-    </div>
-    <form>
-      <div class="form-step active">
-        <p><b>DADOS DA EMPRESA</b></p>
 
-        <!-- DADOS DA EMPRESA -->
-        <label>Nome Fantasia:</label>
-        <input type="text" name="NomeFantasia" placeholder="Informe o nome fantasia">
-
-        <label>Razão Social:</label>
-        <input type="text" name="RazaoSocial" placeholder="Informe a razão social">
-
-        <label>CNPJ:</label>
-        <input type="text" name="CNPJ" placeholder="XX.XXX.XXX/0001-XX">
-
-        <label>Telefone:</label>
-        <input type="text" name="Telefone" placeholder="(XX) X XXXX-XXXX">
-
-        <label>Website da Empresa:</label>
-        <input type="text" name="Website" placeholder="Informe o website">
-
-        <button type="button" class="botao-cadastrarMercado" onclick="nextStep()">Próximo</button>
-      </div>
-
-      <div class="form-step">
-        <p><b>ENDEREÇO</b></p>
-        <!-- ENDEREÇO -->
-        <label>CEP:</label>
-        <input type="text" name="CEP" placeholder="Informe o CEP">
-
-        <label>UF:</label>
-        <input type="text" name="UF" placeholder="Informe o UF">
-
-        <label>Cidade:</label>
-        <input type="text" name="Cidade" placeholder="Informe a cidade">
-
-        <label>Bairro:</label>
-        <input type="text" name="Bairro" placeholder="Informe o bairro">
-
-        <label>Número:</label>
-        <input type="text" name="Numero" placeholder="Exemplo 123">
-
-        <label>Complemento:</label>
-        <input type="text" name="Complemento" placeholder="Informe o complemento">
-
-        <button type="button" class="botao-cadastrarMercado" onclick="prevStep()">Anterior</button>
-        <button type="button" class="botao-cadastrarMercado" onclick="nextStep()">Próximo</button>
-      </div>
-
-      <div class="form-step">
-        <p><b>RESPONSÁVEL LEGAL</b></p>
-        <!-- RESPONSÁVEL LEGAL -->
-        <label>Nome Completo:</label>
-        <input type="text" name="NomeCompleto" placeholder="Informe o nome completo">
-
-        <label>Função:</label>
-        <input type="text" name="Funcao" placeholder="Informe a função">
-
-        <label>E-mail:</label>
-        <input type="email" name="Email" placeholder="Informe o e-mail">
-
-        <label>Telefone:</label>
-        <input type="tel" name="TelefoneResponsavel" placeholder="(XX) X XXXX-XXXX">
-
-        <button type="button" class="botao-cadastrarMercado" onclick="prevStep()">Anterior</button>
-        <a href="login.html" class="botao-cadastrarMercado">Cadastrar</a>
-
-      </div>
-    </form>
-  </div>
-
-  <script>
-    let currentStep = 1;
-
-    function nextStep() {
-      const formSteps = document.querySelectorAll('.form-step');
-      if (currentStep < formSteps.length) {
-        formSteps[currentStep - 1].classList.remove('active');
-        currentStep++;
-        formSteps[currentStep - 1].classList.add('active');
-      }
-    }
-
-    function prevStep() {
-      const formSteps = document.querySelectorAll('.form-step');
-      if (currentStep > 1) {
-        formSteps[currentStep - 1].classList.remove('active');
-        currentStep--;
-        formSteps[currentStep - 1].classList.add('active');
-      }
-    }
-
-  </script>
->>>>>>> 1c9442f43914195e4d8e15918f1e26cae0a15de0
 </body>
 
 </html>
