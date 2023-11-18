@@ -49,6 +49,10 @@ function cadastrar() {
     .catch(function (res) {
       console.log(res);
     });
+
+    alert("Cadastro Realizado com sucesso!")
+    window.location.href = "./login.html";
+
 }
 
 function limpar_campos_formulario() {
@@ -70,10 +74,12 @@ function limpar_campos_formulario() {
   senha.value = "";
 }
 
+
+
 formulario_cadastro.addEventListener("submit", (e) => {
   e.preventDefault();
 
   cadastrar();
 
-  // limpar_campos_formulario();
+  limpar_campos_formulario();
 });
