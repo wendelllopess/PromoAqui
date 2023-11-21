@@ -18,11 +18,11 @@
 
         :root {
             --body-color: white;
-            --sidebar-color: #fff;
+            --sidebar-color: black;
             --primary-color: #FFB31F;
-            --primary-color-light: #f6f5ff;
+            --primary-color-light: black;
             --toggle-color: #ddd;
-            --text-color: #000000;
+            --text-color: #FFB31F;
             /*Transição da barra de nav */
             --tran-05: all 0.3s ease;
         }
@@ -315,8 +315,8 @@
             margin-top: 1px;
             margin-bottom: 24px;
             text-align: center;
-            background-color: orange;
-            color: white;
+            background-color: black;
+            color: orange;
         }
 
 
@@ -337,13 +337,45 @@
             text-align: center;
             text-decoration: none;
             border-radius: 8px;
+            background-color:  #FFB31F;
         }
 
         /* Passar mouse  por cima do botão*/
         .Atualizar:hover {
-            background-color: orange;
-            color: white;
+            background-color:#FFA000;
         }
+
+        .anterior{
+            margin-right: 10cm;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color:  #FFB31F;
+        }
+
+        .anterior:hover {
+            background-color:#FFA000;
+        }
+
+        .proxima{
+            margin-right: 10cm;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            background-color:  #FFB31F;
+        }
+
+        .proxima:hover {
+            background-color:#FFA000;
+        }
+     
     </style>
 </head>
 
@@ -431,21 +463,21 @@
                 <div class="form-step active" id="step1">
                     <form action="Controle" method="post">
 
-                        <p><b>DADOS DA EMPRESA</b></p>
+                        <p><b>Dados da Empresa</b></p>
                         <label>Nome Fantasia</label>
-                        <input type="text" name="NomeFantasia" placeholder="TATICO">
+                        <input type="text" name="NomeFantasia" placeholder="Nome Fantasia">
                         <br>
                         <label>Razão Social:</label>
-                        <input type="text" name="RazaoSocial" placeholder="TATICO SUPERMERCADOS LTDA">
+                        <input type="text" name="RazaoSocial" placeholder="Razao Social">
                         <label for="senha">Defina uma senha</label>
                         <input type="password" name="senha" placeholder="********">
                         <label>CNPJ:</label>
-                        <input type="text" name="CNPJ" placeholder="243.344.333/0001-12">
+                        <input type="text" name="CNPJ" placeholder="CNPJ">
                         <label>Telefone:</label>
-                        <input type="text" name="Telefone" placeholder="(61) 9112-2321">
+                        <input type="text" name="Telefone" placeholder="Telefone">
                         <label>Website da Empresa:</label>
-                        <input type="text" name="Website" placeholder="www.taticobaratotododia.com.br">
-                        <button type="button" onclick="nextStep()">Próxima</button>
+                        <input type="text" name="Website" placeholder="Website ">
+                        <button type="button" class="proxima" onclick="nextStep()">Próxima</button>
                         <button class="Atualizar">Atualizar</button>
                     </form>
                 </div>
@@ -453,33 +485,33 @@
                 <div class="form-step" id="step2">
                     <p><b>ENDEREÇO</b></p>
                     <label>CEP:</label>
-                    <input type="text" name="CEP" placeholder="72300776">
+                    <input type="text" name="CEP" placeholder="Cep">
                     <label>UF:</label>
-                    <input type="text" name="UF" placeholder="DF">
+                    <input type="text" name="UF" placeholder="UF">
                     <label>Cidade:</label>
-                    <input type="text" name="Cidade" placeholder="Brasília">
+                    <input type="text" name="Cidade" placeholder="Cidade">
                     <label>Bairro:</label>
-                    <input type="text" name="Bairro" placeholder="Gama">
+                    <input type="text" name="Bairro" placeholder="Bairro">
                     <label>Número:</label>
-                    <input type="text" name="Numero" placeholder="43">
+                    <input type="text" name="Numero" placeholder="Numero">
                     <label>Complemento:</label>
-                    <input type="text" name="Complemento" placeholder="">
-                    <button type="button" onclick="prevStep()">Anterior</button>
-                    <button type="button" onclick="nextStep()">Próxima</button>
+                    <input type="text" name="Complemento" placeholder="Complemento">
+                    <button type="button" class="anterior" onclick="prevStep()">Anterior</button>
+                    <button type="button" class="proxima" onclick="nextStep()">Próxima</button>
                     <button class="Atualizar">Atualizar</button>
                 </div>
 
                 <div class="form-step" id="step3">
                     <p><b>RESPONSÁVEL LEGAL</b></p>
                     <label>Nome Completo:</label>
-                    <input type="text" name="NomeCompleto" placeholder="José Santos">
+                    <input type="text" name="NomeCompleto" placeholder="Nome Completo">
                     <label>Função:</label>
-                    <input type="text" name="Funcao" placeholder="Gerente">
+                    <input type="text" name="Funcao" placeholder="Função">
                     <label>E-mail:</label>
-                    <input type="email" name="Email" placeholder="Jose_Santos@dominio.com">
+                    <input type="email" name="Email" placeholder="Email">
                     <label>Telefone:</label>
-                    <input type="tel" name="TelefoneResponsavel" placeholder="(61) 9 9972-1236">
-                    <button type="button" onclick="prevStep()">Anterior</button>
+                    <input type="tel" name="TelefoneResponsavel" placeholder="Telefone Responsavel">
+                    <button type="button" class="anterior" onclick="prevStep()">Anterior</button>
                     <button class="Atualizar">Atualizar</button>
                 </div>
             </div>
